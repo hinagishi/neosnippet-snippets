@@ -350,11 +350,47 @@ alias   \begin{itshape} \itshape
 	\end{itshape}
 
 # ==== BEAMER ====
+snippet institute
+alias \institute
+    \institute[${1:TARGET}]{${2:TARGET}}
+
+snippet usetheme
+alias \usetheme
+    \usetheme{${1:#:themename}}
+
+snippet usefonttheme
+alias \usefonttheme
+    \usefonttheme{${1:TARGET}}
+
 snippet frame
 alias  \begin{frame} \frame
     \begin{frame}{${1:#:frametitle}}
         ${2:TARGET}
     \end{frame}
+
+snippet onslide
+alias \onslide
+    \onslide${1:}<${2:#:1}>{
+        ${3:TARGET}
+    }
+
+snippet frame
+alias \begin{frame} \frame
+    \begin{frame}<${1:1}>{${2:#frametitle}}
+        ${2:TARGET}
+    \end{frame}
+
+snippet columns
+alias \begin{columns} columns
+    \begin{columns}[${1:TARGET}]
+        ${2:TARGET}
+    \end{columns}
+
+snippet column
+alias \begin{column} column
+    \begin{column}{${1:TARGET}}
+        ${2:TARGET}
+    \end{column}
 
 snippet block
 alias \begin{block}
